@@ -73,7 +73,8 @@ async function fetchJson(url: string, timeoutMs = 5000): Promise<GridStatus | nu
   }
 }
 
-const URLS = ["/api/status.json", "/status.json"]
+const BASE = import.meta.env.BASE_URL
+const URLS = [`${BASE}api/status.json`, `${BASE}status.json`]
 
 export async function loadStatus(): Promise<GridStatus> {
   for (const u of URLS) {
