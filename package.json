@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:live": "node monitor/scan.mjs && npm run build",
     "lint": "oxlint",
     "preview": "vite preview",
     "scan": "node monitor/scan.mjs"
